@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="my-3 display-5 fw-bold ls-tight text-center">
+    <span style="color: #af96b3;">Add New ToDo</span>
+</h1>
+
+<form method="POST" class="container-form">
+    {% csrf_token %}
+
+    <table class="form-table">
+        {{form.as_table}}
+    </table>
+
+    <button class="btn btn-primary submitTodo" style="background-color: #45355a;" type="submit">Add Todo</button>
+</form>
+
+
+{% endblock %}
